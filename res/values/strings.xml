@@ -14,7 +14,7 @@
     <string name="profile_balanced">Balanced</string>
     <string name="profile_balanced_summary">Up to two A57 cores at 1.44 GHz. Recommended.</string>
     <string name="profile_performance">Performance</string>
-    <string name="profile_performance_summary">All eight cores, A57 up to 1.96 GHz. Uses more battery and warms the phone; thermal protection stays on.</string>
+    <string name="profile_performance_summary">All eight cores, no profile limit. Uses more battery and warms the phone; thermal protection still slows the A57 cores when hot.</string>
 
     <string name="profile_battery_saver_summary"><xliff:g id="profile" example="Power save">%1$s</xliff:g> (Battery Saver)</string>
     <string name="profile_battery_saver_note">Battery Saver is on and uses Power save. Your choice applies again when it turns off.</string>

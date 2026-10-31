@@ -14,7 +14,7 @@
     <string name="profile_balanced">Bilanciato</string>
     <string name="profile_balanced_summary">Fino a due core A57 a 1,44 GHz. Consigliato.</string>
     <string name="profile_performance">Prestazioni</string>
-    <string name="profile_performance_summary">Tutti gli otto core, A57 fino a 1,96 GHz. Consuma più batteria e scalda il telefono; la protezione termica resta attiva.</string>
+    <string name="profile_performance_summary">Tutti gli otto core, senza limiti del profilo. Consuma più batteria e scalda il telefono; la protezione termica rallenta comunque gli A57 quando sono caldi.</string>
 
     <string name="profile_battery_saver_summary"><xliff:g id="profile" example="Risparmio energetico">%1$s</xliff:g> (Risparmio energetico di sistema)</string>
     <string name="profile_battery_saver_note">Il Risparmio energetico di sistema è attivo e usa il profilo Risparmio energetico. La tua scelta torna in uso quando si disattiva.</string>

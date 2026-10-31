@@ -18,7 +18,7 @@ branch `lineage-23-cityman`, `power/`) turns it into perfd locks:
 |---|---|
 | Power save | A57 cluster offline, A53 up to 1.25 GHz |
 | Balanced (default) | at most two A57 cores, up to 1.44 GHz |
-| Performance | all eight cores, A57 up to 1.96 GHz |
+| Performance | all eight cores, no profile limit (thermal-engine still throttles the A57s) |
 
 Battery Saver uses power save while it is on; the page and the tile show it
 and keep the stored choice for when it turns off.
