@@ -1,8 +1,9 @@
 # CitymanParts
 
 Device settings for the Microsoft Lumia 950 XL (`cityman`) LineageOS 23
-(Android 16) port. A system app without a launcher entry that adds:
+(Android 16) port. A system app that adds:
 
+- a **Performance profile** launcher icon;
 - **Settings > Battery > Performance profile**: power save, balanced or
   performance, with the profile in use as the entry's summary;
 - a **Performance** Quick Settings tile that cycles the profiles (long press

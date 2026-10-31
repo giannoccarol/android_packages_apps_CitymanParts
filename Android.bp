@@ -4,7 +4,8 @@
 //
 
 // Device settings: the performance profiles in Settings > Battery and a
-// Quick Settings tile (power/README.md). No launcher entry.
+// Quick Settings tile (power/README.md of the device tree), with a
+// launcher icon.
 android_app {
     name: "CitymanParts",
     srcs: ["src/**/*.java"],
