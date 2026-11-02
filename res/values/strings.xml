@@ -18,4 +18,8 @@
 
     <string name="profile_battery_saver_summary"><xliff:g id="profile" example="Power save">%1$s</xliff:g> (Battery Saver)</string>
     <string name="profile_battery_saver_note">Battery Saver is on and uses Power save. Your choice applies again when it turns off.</string>
+
+    <string name="usb_otg_tile_label">USB OTG</string>
+    <string name="usb_otg_on">Host: keyboards, controllers, drives. Unplug any charger</string>
+    <string name="usb_otg_off">Off: charging and PC connection</string>
 </resources>
