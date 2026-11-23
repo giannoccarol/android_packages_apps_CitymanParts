@@ -40,6 +40,7 @@ public class CameraKeyFragment extends PreferenceFragmentCompat {
     private Preference mShort;
     private Preference mLong;
     private SwitchPreference mScreenOff;
+    private SwitchPreference mCloseOnScreenOff;
 
     private final ContentObserver mObserver = new ContentObserver(
             new Handler(Looper.getMainLooper())) {
@@ -72,6 +73,7 @@ public class CameraKeyFragment extends PreferenceFragmentCompat {
         mShort = findPreference("camera_key_short");
         mLong = findPreference("camera_key_long");
         mScreenOff = findPreference("camera_key_screen_off");
+        mCloseOnScreenOff = findPreference("camera_key_close_on_screen_off");
         mShort.setOnPreferenceClickListener(p -> {
             chooseAction(CameraKeyConfig.SETTING_SHORT, mShort.getTitle());
             return true;
@@ -85,6 +87,11 @@ public class CameraKeyFragment extends PreferenceFragmentCompat {
                     (Boolean) value);
             return true;
         });
+        mCloseOnScreenOff.setOnPreferenceChangeListener((p, value) -> {
+            CameraKeyConfig.setCloseOnScreenOffEnabled(requireContext().getContentResolver(),
+                    (Boolean) value);
+            return true;
+        });
     }
 
     @Override
@@ -92,7 +99,8 @@ public class CameraKeyFragment extends PreferenceFragmentCompat {
         super.onStart();
         ContentResolver resolver = requireContext().getContentResolver();
         for (String setting : new String[] {CameraKeyConfig.SETTING_SHORT,
-                CameraKeyConfig.SETTING_LONG, CameraKeyConfig.SETTING_SCREEN_OFF}) {
+                CameraKeyConfig.SETTING_LONG, CameraKeyConfig.SETTING_SCREEN_OFF,
+                CameraKeyConfig.SETTING_CLOSE_ON_SCREEN_OFF}) {
             resolver.registerContentObserver(CameraKeyConfig.uri(setting), false, mObserver,
                     UserHandle.USER_ALL);
         }
@@ -114,6 +122,7 @@ public class CameraKeyFragment extends PreferenceFragmentCompat {
         mShort.setSummary(CameraKey.label(context, CameraKeyConfig.getShort(resolver)));
         mLong.setSummary(CameraKey.label(context, CameraKeyConfig.getLong(resolver)));
         mScreenOff.setChecked(CameraKeyConfig.isScreenOffEnabled(resolver));
+        mCloseOnScreenOff.setChecked(CameraKeyConfig.isCloseOnScreenOffEnabled(resolver));
     }
 
     private void chooseAction(String setting, CharSequence title) {
