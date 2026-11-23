@@ -24,6 +24,17 @@
         android:summary="@string/profile_performance_summary"
         android:persistent="false" />
 
+    <Preference
+        android:key="camera_key"
+        android:title="@string/camera_key_title"
+        android:summary="@string/camera_key_settings_summary"
+        android:icon="@drawable/ic_camera_key"
+        android:persistent="false">
+        <intent
+            android:targetPackage="org.lineageos.cityman.parts"
+            android:targetClass="org.lineageos.cityman.parts.CameraKeyActivity" />
+    </Preference>
+
     <com.android.settingslib.widget.FooterPreference
         android:key="battery_saver_note"
         android:title="@string/profile_battery_saver_note"

@@ -45,3 +45,15 @@ uid, so that it can set the property; the device sepolicy allows
 ## License
 
 Apache License 2.0.
+
+## Camera button
+
+Settings > System > Camera button chooses what a press and a long press do:
+open the camera, flashlight, an app or nothing. With the screen off only a
+long press counts. In a camera app the button keeps its two stages: half press
+focuses, full press takes the photo.
+
+The choices are in `Settings.Secure` (`lumia_camera_key_short`, `_long`,
+`_screen_off`). `CitymanKeyHandler.jar` runs in system_server through
+`config_deviceKeyHandlerLibs`, next to the default LineageParts handler. The
+device tree maps `KEY_CAMERA_SNAPSHOT` and `KEY_CAMERA_FOCUS` in `gpio-keys.kl`.

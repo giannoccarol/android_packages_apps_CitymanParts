@@ -8,7 +8,10 @@
 // launcher icon.
 android_app {
     name: "CitymanParts",
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.java",
+        ":CitymanCameraKeyConfig",
+    ],
     resource_dirs: ["res"],
     certificate: "platform",
     platform_apis: true,
@@ -24,6 +27,23 @@ android_app {
     ],
 
     optimize: {
+        enabled: false,
+    },
+}
+
+filegroup {
+    name: "CitymanCameraKeyConfig",
+    srcs: ["keyhandler/src/org/lineageos/cityman/keyhandler/CameraKeyConfig.java"],
+}
+
+// Camera button handler, loaded into system_server through
+// config_deviceKeyHandlerLibs.
+java_library {
+    name: "CitymanKeyHandler",
+    srcs: ["keyhandler/src/**/*.java"],
+    system_ext_specific: true,
+    installable: true,
+    dex_preopt: {
         enabled: false,
     },
 }

@@ -44,6 +44,28 @@
                 android:resource="@drawable/ic_perf_profile" />
         </activity>
 
+        <!-- Settings > System > Camera button -->
+        <activity
+            android:name=".CameraKeyActivity"
+            android:label="@string/camera_key_title"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.system" />
+            <meta-data
+                android:name="com.android.settings.title"
+                android:resource="@string/camera_key_title" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/camera_key_settings_summary" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_camera_key" />
+        </activity>
+
         <provider
             android:name=".SummaryProvider"
             android:authorities="org.lineageos.cityman.parts.summary"

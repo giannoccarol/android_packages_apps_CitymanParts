@@ -22,4 +22,18 @@
     <string name="usb_otg_tile_label">USB OTG</string>
     <string name="usb_otg_on">Host: keyboards, controllers, drives. Unplug any charger</string>
     <string name="usb_otg_off">Off: charging and PC connection</string>
+    <string name="camera_key_title">Camera button</string>
+    <string name="camera_key_settings_summary">Choose what the button does</string>
+    <string name="camera_key_short_title">Press</string>
+    <string name="camera_key_long_title">Press and hold</string>
+    <string name="camera_key_screen_off_title">Use with the screen off</string>
+    <string name="camera_key_screen_off_summary">Hold the button to use it while the screen is off. A short press does nothing, so it does not go off in your pocket.</string>
+    <string name="camera_key_footer">In a camera app the button works as usual: press halfway to focus, all the way to take the photo.</string>
+    <string name="camera_key_action_none">No action</string>
+    <string name="camera_key_action_camera">Open the camera</string>
+    <string name="camera_key_action_torch">Flashlight on or off</string>
+    <string name="camera_key_action_app">Open an app\u2026</string>
+    <string name="camera_key_action_app_named">Open <xliff:g id="app" example="Maps">%1$s</xliff:g></string>
+    <string name="camera_key_app_missing">Open an app (not installed)</string>
+    <string name="camera_key_pick_app">Choose an app</string>
 </resources>
